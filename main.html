@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio | Data Analyst & Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Container -->
+    <div class="background-container">
+        <div class="background-image"></div>
+    </div>
+
+    <!-- Content Overlay -->
+    <div class="content-overlay">
+        <!-- Header -->
+        <header>
+            <nav class="navbar">
+                <a href="#" class="logo">My<span>Portfolio</span></a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="fade-in">Hi, I'm <span>Alex Carter</span></h1>
+                <p class="fade-in">Data Analyst & Web Developer with a passion for turning data into insights and building beautiful, functional websites.</p>
+                <div class="fade-in">
+                    <a href="#projects" class="btn">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+                <div class="social-icons fade-in">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-medium"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-img">
+                        <img src="images/profile.jpg" alt="Profile Image">
+                    </div>
+                    <div class="about-text">
+                        <h3>Data Analyst & Web Developer</h3>
+                        <p>I'm a passionate professional with expertise in both data analysis and web development. I love transforming raw data into meaningful insights and creating beautiful, functional websites.</p>
+                        <p>With 5 years of experience in the field, I've worked on various projects ranging from data visualization dashboards to full-stack web applications.</p>
+                        <div class="skills">
+                            <h4>My Skills</h4>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Data Analysis</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Python</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>SQL</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>HTML/CSS</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>JavaScript</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name">
+                                    <span>Tableau/Power BI</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects" id="projects">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>My Projects</h2>
+                </div>
+                <div class="project-tabs">
+                    <button class="tab-btn active" data-tab="all">All</button>
+                    <button class="tab-btn" data-tab="data">Data Analysis</button>
+                    <button class="tab-btn" data-tab="web">Web Development</button>
+                </div>
+                <div class="project-grid">
+                    <!-- Data Analysis Project 1 -->
+                    <div class="project-card" data-category="data">
+                        <div class="project-img">
+                            <img src="images/data-project1.jpg" alt="Sales Dashboard">
+                        </div>
+                        <div class="project-info">
+                            <h3>Sales Performance Dashboard</h3>
+                            <p>Interactive dashboard analyzing sales trends, customer segmentation, and regional performance.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Tableau</span>
+                                <span>Pandas</span>
+                                <span>Data Visualization</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development Project 1 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="images/web-project1.jpg" alt="E-commerce Website">
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Platform</h3>
+                            <p>Full-featured online store with product catalog, cart functionality, and secure checkout.</p>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Stripe API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Analysis Project 2 -->
+                    <div class="project-card" data-category="data">
+                        <div class="project-img">
+                            <img src="images/data-project2.jpg" alt="Customer Churn Analysis">
+                        </div>
+                        <div class="project-info">
+                            <h3>Customer Churn Prediction</h3>
+                            <p>Machine learning model to predict customer churn with 92% accuracy using historical data.</p>
+                            <div class="project-tags">
+                                <span>Python</span>
+                                <span>Scikit-learn</span>
+                                <span>Feature Engineering</span>
+                                <span>Classification</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development Project 2 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="images/web-project2.jpg" alt="Task Management App">
+                        </div>
+                        <div class="project-info">
+                            <h3>Task Management Application</h3>
+                            <p>Kanban-style task management tool with drag-and-drop functionality and team collaboration.</p>
+                            <div class="project-tags">
+                                <span>Vue.js</span>
+                                <span>Firebase</span>
+                                <span>Drag & Drop</span>
+                                <span>Real-time</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Data Analysis Project 3 -->
+                    <div class="project-card" data-category="data">
+                        <div class="project-img">
+                            <img src="images/data-project3.jpg" alt="Market Basket Analysis">
+                        </div>
+                        <div class="project-info">
+                            <h3>Market Basket Analysis</h3>
+                            <p>Association rule mining to discover product relationships and optimize store layout.</p>
+                            <div class="project-tags">
+                                <span>R</span>
+                                <span>Apriori Algorithm</span>
+                                <span>Market Research</span>
+                                <span>Power BI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Web Development Project 3 -->
+                    <div class="project-card" data-category="web">
+                        <div class="project-img">
+                            <img src="images/web-project3.jpg" alt="Weather App">
+                        </div>
+                        <div class="project-info">
+                            <h3>Weather Forecast Application</h3>
+                            <p>Real-time weather forecasting app with 5-day predictions and location-based services.</p>
+                            <div class="project-tags">
+                                <span>JavaScript</span>
+                                <span>API Integration</span>
+                                <span>Geolocation</span>
+                                <span>Responsive Design</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                                <a href="#"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="section-inner">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>&copy; <span id="year"></span> Alex Carter. All Rights Reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-medium"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Back to Top Button -->
+        <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
