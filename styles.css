@@ -1,4 +1,15 @@
-/* CSS Reset */
+:root {
+    --primary-color: #e04a1f;
+    --secondary-color: #c03912;
+    --accent-color: #e74c3c;
+    --light-color: #f9f9f9;
+    --dark-color: #2c3e50;
+    --text-dark: #2c3e50;
+    --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --section-spacing: 80px;
+}
+
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,21 +17,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Variables - Updated Dark Orange-Red Theme */
-:root {
-    --primary-color: #e04a1f;  /* Darker orange-red */
-    --secondary-color: #c03912;  /* Even darker red-orange */
-    --accent-color: #e74c3c;
-    --light-color: #f9f9f9;
-    --dark-color: #2c3e50;
-    --text-color: #333;
-    --text-light: #fff;
-    --text-dark: #2c3e50;
-    --transition: all 0.3s ease;
-    --section-spacing: 80px;  /* Added for consistent spacing */
-}
-
-/* Body and Background */
 body {
     color: var(--text-dark);
     line-height: 1.6;
@@ -29,7 +25,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Background Image with Darker Overlay */
+/* Background */
 .background-container {
     position: fixed;
     top: 0;
@@ -49,6 +45,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     image-rendering: crisp-edges;
+    will-change: transform;
 }
 
 .background-image::after {
@@ -58,15 +55,15 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.2);  /* Darker overlay for better contrast */
+    background: rgba(0, 0, 0, 0.2);
     z-index: -1;
 }
 
-/* Transparent Section Separations */
+/* Sections */
 .section {
     padding: var(--section-spacing) 20px;
     position: relative;
-    background-color: transparent;  /* Fully transparent sections */
+    background-color: transparent;
     margin-bottom: var(--section-spacing);
 }
 
@@ -79,83 +76,75 @@ body {
     transform: translateX(-50%);
     width: 80%;
     height: 1px;
-    background: rgba(224, 74, 31, 0.3);  /* Semi-transparent orange-red divider */
+    background: rgba(224, 74, 31, 0.3);
 }
 
 .section:last-child::after {
-    display: none;  /* Remove divider after last section */
+    display: none;
 }
 
 .section-inner {
     max-width: 1200px;
     margin: 0 auto;
-    background-color: rgba(255, 255, 255, 0.15);  /* More transparent */
-    backdrop-filter: blur(8px);  /* Increased blur for better readability */
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
     padding: 40px;
     border-radius: 10px;
-    border: 1px solid rgba(224, 74, 31, 0.1);  /* Subtle orange-red border */
+    border: 1px solid rgba(224, 74, 31, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
 }
 
-/* Header - More Transparent */
+/* Header */
 header {
     background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
     backdrop-filter: blur(8px);
     border-bottom: 1px solid rgba(224, 74, 31, 0.1);
+    transition: var(--transition);
 }
 
-/* Buttons - Updated Color Scheme */
+/* Buttons */
 .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     background: var(--primary-color);
+    color: var(--light-color);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
     box-shadow: 0 4px 15px rgba(224, 74, 31, 0.4);
 }
 
 .btn:hover {
     background: var(--secondary-color);
+    transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(192, 57, 18, 0.4);
 }
 
-.btn-outline {
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.btn-outline:hover {
-    background: var(--primary-color);
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Project Cards - More Transparent */
-.project-card {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(224, 74, 31, 0.15);
-}
-
-.project-card:hover {
-    border-color: rgba(224, 74, 31, 0.3);
-    box-shadow: 0 15px 30px rgba(224, 74, 31, 0.2);
-}
-
-/* Skill Bars - Updated Colors */
-.skill-progress {
-    background: linear-gradient(
-        to right,
-        var(--primary-color),
-        var(--secondary-color)
-    );
-}
-
-/* Contact Form - More Transparent */
-.contact-form {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(224, 74, 31, 0.15);
-}
-
-/* Footer - Semi-Transparent */
-footer {
-    background: rgba(44, 62, 80, 0.7);
-    margin-top: var(--section-spacing);
-}
-
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
     :root {
         --section-spacing: 60px;
@@ -165,8 +154,11 @@ footer {
         padding: 30px 20px;
         backdrop-filter: blur(5px);
     }
-    
-    .section::after {
-        width: 90%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        animation: none !important;
     }
 }
